@@ -43,15 +43,15 @@ function get_git_status() {
 
 function get_prompt_symbol() {
     if [ $? -eq 0 ]; then
-        echo -e "$COLOR_GREEN$SYMBOL_PROMPT_SUCCESS"
+        echo -e "$COLOR_GREEN$SYMBOL_PROMPT"
     else
-        echo -e "$COLOR_RED$SYMBOL_PROMPT_FAILURE"
+        echo -e "$COLOR_RED$SYMBOL_PROMPT"
     fi
 }
 
 function get_prompt_command() {
     local prompt_symbol=$(get_prompt_symbol)
-    PS1="$BOLD_ON$COLOR_ORANGE\W$BOLD_OFF$COLOR_PURPLE\$(get_git_status) $prompt_symbol$COLOR_RESET "
+    PS1="$BOLD_ON$COLOR_ORANGE\w$BOLD_OFF$COLOR_PURPLE\$(get_git_status) $prompt_symbol$COLOR_RESET "
 }
 
 PROMPT_COMMAND=get_prompt_command

@@ -1,0 +1,57 @@
+# Styling 
+BOLD_ON="\[\e[1m\]"
+BOLD_OFF="\[\e[22m\]"
+
+# Colors
+COLOR_GREEN="\[\e[38;2;140;197;112m\]"
+COLOR_RED="\[\e[38;2;240;99;114m\]"
+COLOR_PURPLE="\[\e[38;2;198;120;221m\]"
+COLOR_ORANGE="\[\e[38;2;209;154;102m\]"
+COLOR_RESET="\[\e[0m\]"
+
+# Symbols
+SYMBOL_GIT_DIRTY="◇"
+SYMBOL_GIT_AHEAD="↑"
+SYMBOL_GIT_BEHIND="↓"
+SYMBOL_PROMPT="❱"
+
+function get_git_status() {
+    branch=$(git branch --show-current 2>/dev/null)
+    if [ -z "$branch" ]; then
+        return
+    fi
+
+    status=""
+
+    if [ -n "$(git status --porcelain 2>/dev/null)" ]; then
+        status+="$SYMBOL_GIT_DIRTY"
+    fi
+
+    upstream=$(git rev-parse --abbrev-ref @{u} 2>/dev/null)
+    if [ -n "$upstream" ]; then
+        ahead_behind=$(git rev-list --left-right --count HEAD..."$upstream")
+
+        ahead_count=$(echo "$ahead_behind" | awk '{print $1}')
+        behind_count=$(echo "$ahead_behind" | awk '{print $2}')
+
+        [ "$ahead_count" -gt 0 ] && status+="$SYMBOL_GIT_AHEAD"
+        [ "$behind_count" -gt 0 ] && status+="$SYMBOL_GIT_BEHIND"
+    fi
+
+    echo " $branch$status"
+}
+
+function get_prompt_symbol() {
+    if [ $? -eq 0 ]; then
+        echo -e "$COLOR_GREEN$SYMBOL_PROMPT_SUCCESS"
+    else
+        echo -e "$COLOR_RED$SYMBOL_PROMPT_FAILURE"
+    fi
+}
+
+function get_prompt_command() {
+    local prompt_symbol=$(get_prompt_symbol)
+    PS1="$BOLD_ON$COLOR_ORANGE\W$BOLD_OFF$COLOR_PURPLE\$(get_git_status) $prompt_symbol$COLOR_RESET "
+}
+
+PROMPT_COMMAND=get_prompt_command

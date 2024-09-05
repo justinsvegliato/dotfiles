@@ -1,0 +1,9 @@
+[user]
+  email = justin.svegliato@gmail.com
+  name = Justin Svegliato
+[credential]
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential "azrepos:org/microsoft"]
+	username = jsvegliato

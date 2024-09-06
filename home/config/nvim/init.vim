@@ -10,10 +10,10 @@ call plug#end()
 " Plugin Configurations
 lua << EOF
     require'nvim-treesitter.configs'.setup {
-        ensure_installed = {"python"},
+        ensure_installed = {"python", "bash", "gitignore", "git_config", "html", "css", "javascript", "json", "latex"},
         highlight = {
             enable = true, 
-            additional_vim_regex_highlighting = true 
+            additional_vim_regex_highlighting = false 
         },
         indent = {
             enable = true

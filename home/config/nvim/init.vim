@@ -1,26 +1,26 @@
 " Plugins 
 call plug#begin()
-  Plug 'olimorris/onedarkpro.nvim'
-  Plug 'nvim-lualine/lualine.nvim'
-  Plug 'nvim-tree/nvim-tree.lua'
-  Plug 'nvim-tree/nvim-web-devicons'
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'olimorris/onedarkpro.nvim'
+    Plug 'nvim-lualine/lualine.nvim'
+    Plug 'nvim-tree/nvim-tree.lua'
+    Plug 'nvim-tree/nvim-web-devicons'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " Plugin Configurations
 lua << EOF
-  require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"python"},
-    highlight = {
-      enable = true, 
-      additional_vim_regex_highlighting = true 
-    },
-    indent = {
-      enable = true
+    require'nvim-treesitter.configs'.setup {
+        ensure_installed = {"python"},
+        highlight = {
+            enable = true, 
+            additional_vim_regex_highlighting = true 
+        },
+        indent = {
+            enable = true
+        }
     }
-  }
-  require('lualine').setup()
-  require("nvim-tree").setup()
+    require('lualine').setup()
+    require("nvim-tree").setup()
 EOF
 
 " Global Settings

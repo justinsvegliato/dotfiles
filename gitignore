@@ -1,0 +1,30 @@
+# Mac Files 
+.DS_Store
+
+# Virtual Environment Files 
+env
+.env
+venv
+.venv
+
+# Build Files
+build
+dist
+bin
+
+# IDE Files
+.vscode
+
+# Python Files
+.pth
+.pytest_cache
+*.egg
+*.egg-info
+eggs
+develop-eggs
+
+# JavaScript Files
+node_modules/
+
+# Temporary Files
+tmp/

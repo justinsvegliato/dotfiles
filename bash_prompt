@@ -17,22 +17,23 @@ SYMBOL_PROMPT="❱"
 
 function get_git_status() {
     branch=$(git branch --show-current 2>/dev/null)
+
     if [ -z "$branch" ]; then
         return
     fi
 
-    status=""
+    local status=""
 
     if [ -n "$(git status --porcelain 2>/dev/null)" ]; then
         status+="$SYMBOL_GIT_DIRTY"
     fi
 
-    upstream=$(git rev-parse --abbrev-ref @{u} 2>/dev/null)
+    local upstream=$(git rev-parse --abbrev-ref @{u} 2>/dev/null)
     if [ -n "$upstream" ]; then
-        ahead_behind=$(git rev-list --left-right --count HEAD..."$upstream")
+        local ahead_behind=$(git rev-list --left-right --count HEAD..."$upstream")
 
-        ahead_count=$(echo "$ahead_behind" | awk '{print $1}')
-        behind_count=$(echo "$ahead_behind" | awk '{print $2}')
+        local ahead_count=$(echo "$ahead_behind" | awk '{print $1}')
+        local behind_count=$(echo "$ahead_behind" | awk '{print $2}')
 
         [ "$ahead_count" -gt 0 ] && status+="$SYMBOL_GIT_AHEAD"
         [ "$behind_count" -gt 0 ] && status+="$SYMBOL_GIT_BEHIND"

@@ -1,6 +1,6 @@
 # IMPORTS
-if [ -f ~/.svega_prompt ]; then
-    . ~/.svega_prompt
+if [ -f ~/.bash_prompt ]; then
+    . ~/.bash_prompt
 fi
 
 # EXPORTS
@@ -13,7 +13,7 @@ export HISTFILESIZE=1000
 export PYENV_ROOT="$HOME/.pyenv"
 
 # ALIASES
-alias ls="ls -G"
+alias ls="ls --color=auto"
 alias vim="nvim"
 alias vi="nvim"
 

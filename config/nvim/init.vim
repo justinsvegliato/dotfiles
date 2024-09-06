@@ -114,7 +114,7 @@ set ttyfast
 set encoding=UTF-8
 
 " Map Settings
-map <C-b> :NvimTreeToggle<CR>
+map <C-o> :NvimTreeToggle<CR>
 nnoremap ; :
 nnoremap j gj
 nnoremap k gk

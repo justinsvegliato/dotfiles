@@ -53,7 +53,7 @@ set hlsearch
 " Line Settings
 set nolinebreak
 set nowrap
-au BufRead,BufNewFile *.txt set wrap linebreak nolist textwidth=0 wrapmargin=0
+autocmd BufRead,BufNewFile *.txt set wrap linebreak nolist textwidth=0 wrapmargin=0
 
 " Line Number Settings
 set number
@@ -102,6 +102,9 @@ autocmd BufRead,BufNewFile *.txt,*.tex,*.cls,*.sty set spell
 filetype plugin indent on
 set autoread
 set hidden
+
+" Bash File Settings
+autocmd BufNewFile,BufRead .bash* set filetype=sh
 
 " Temp File Settings
 set nobackup

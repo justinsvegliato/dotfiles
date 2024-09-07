@@ -24,7 +24,12 @@ eggs
 develop-eggs
 
 # JavaScript Files
-node_modules/
+node_modules
 
 # Temporary Files
-tmp/
+tmp
+
+# Log Files
+*.log
+log
+logs

@@ -53,7 +53,7 @@ set hlsearch
 " Line Settings
 set nolinebreak
 set nowrap
-autocmd BufRead,BufNewFile *.txt set wrap linebreak nolist textwidth=0 wrapmargin=0
+autocmd BufNewFile,BufRead *.txt set wrap linebreak nolist textwidth=0 wrapmargin=0
 
 " Line Number Settings
 set number
@@ -96,7 +96,7 @@ set backspace=indent,eol,start
 set mouse=a
 
 " Spell-Checking Settings
-autocmd BufRead,BufNewFile *.txt,*.tex,*.cls,*.sty set spell
+autocmd BufNewFile,BufRead *.txt,*.tex,*.cls,*.sty set spell
 
 " File Settings
 filetype plugin indent on

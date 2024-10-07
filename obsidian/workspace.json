@@ -1,18 +1,22 @@
 {
   "main": {
-    "id": "434fe8e8c321c90e",
+    "id": "fffbeaa21ca36024",
     "type": "split",
     "children": [
       {
-        "id": "8f34f190e4088963",
+        "id": "21951cbfb679f9b4",
         "type": "tabs",
         "children": [
           {
-            "id": "12a986b2c0b404f6",
+            "id": "8de6209dac74c9e8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Nellie.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -21,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "668c81204e729500",
+    "id": "778a4c913df530d0",
     "type": "split",
     "children": [
       {
-        "id": "e5c016a4ea2dd0aa",
+        "id": "ded580a2152a7b66",
         "type": "tabs",
         "children": [
           {
-            "id": "dac9100cbe973a63",
+            "id": "0115cc9432d4156b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +43,7 @@
             }
           },
           {
-            "id": "fe2f6a21d372363b",
+            "id": "0528fa352d152945",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -57,22 +61,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 236.5,
+    "collapsed": true
   },
   "right": {
-    "id": "ce8fd48e7992ed29",
+    "id": "54add7481ed11ba3",
     "type": "split",
     "children": [
       {
-        "id": "3910634ba8b3f622",
+        "id": "735ff8ed8c4e467b",
         "type": "tabs",
         "children": [
           {
-            "id": "e0fcf5a26c429e46",
+            "id": "ffbacfd6fad3581f",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Nellie.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,18 +90,19 @@
             }
           },
           {
-            "id": "10be0a2f8dd5902c",
+            "id": "dc10b0a1cdeb1368",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Nellie.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "5d5eb2f8700b97c0",
+            "id": "2ddfbb64a8e48caf",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -106,11 +113,13 @@
             }
           },
           {
-            "id": "634e72787eae0d00",
+            "id": "331dc8293777f4d6",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Nellie.md"
+              }
             }
           }
         ]
@@ -127,9 +136,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "12a986b2c0b404f6",
+  "active": "8de6209dac74c9e8",
   "lastOpenFiles": [
-    "Test.md",
-    "Welcome.md"
+    "Papers/Untitled.md",
+    "Nellie.md",
+    "Priorities.md",
+    "core-plugins-migration.json",
+    "themes/Atom/theme.css",
+    "themes/Atom/manifest.json",
+    "themes/Atom",
+    "themes",
+    "appearance.json",
+    "graph.json",
+    "core-plugins.json",
+    "app.json",
+    "workspace.json"
   ]
 }
